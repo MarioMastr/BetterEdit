@@ -29,8 +29,9 @@ class $modify(BEPauseLayer, EditorPauseLayer) {
 
     void keyDown(enumKeyCodes keyCode) {
         EditorPauseLayer::keyDown(keyCode);
+        CCObject* pSender;
         if (keyCode == enumKeyCodes::KEY_Escape) {
-            this->onResume(nullptr);
+            this->onResume(pSender);
         }
     }
 };
